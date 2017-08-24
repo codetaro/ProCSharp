@@ -68,8 +68,6 @@ namespace ProCSharp.Ch06
             var sum = SumOfSegments(segments);
             Console.WriteLine("SumOfSegments: {0}", sum);*/
             
-            var helloCollection = new HelloCollection();
-            helloCollection.HelloWorld();
         }
 
         static int SumOfSegments(ArraySegment<int>[] segments)

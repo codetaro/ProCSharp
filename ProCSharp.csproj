@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{43BDED6A-12B2-4D44-B26E-8A05C8A04E88}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProCSharp</RootNamespace>
+    <AssemblyName>ProCSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ch04\GenericCustomer.cs" />
+    <Compile Include="Ch04\HisBaseClass.cs" />
+    <Compile Include="Ch04\IBankAccount.cs" />
+    <Compile Include="Ch04\ITransferBankAccount.cs" />
+    <Compile Include="Ch04\JupiterBank\CurrentAccount.cs" />
+    <Compile Include="Ch04\JupiterBank\GoldAccount.cs" />
+    <Compile Include="Ch04\Example.cs" />
+    <Compile Include="Ch04\MyDerivedClass.cs" />
+    <Compile Include="Ch04\SomeClass.cs" />
+    <Compile Include="Ch04\VenusBank\SaverAccount.cs" />
+    <Compile Include="Ch05\Account.cs" />
+    <Compile Include="Ch05\Algorithm.cs" />
+    <Compile Include="Ch05\Document.cs" />
+    <Compile Include="Ch05\DocumentManager.cs" />
+    <Compile Include="Ch05\Example.cs" />
+    <Compile Include="Ch05\IAccount.cs" />
+    <Compile Include="Ch05\IDisplay.cs" />
+    <Compile Include="Ch05\IIndex.cs" />
+    <Compile Include="Ch05\LinkedList.cs" />
+    <Compile Include="Ch05\LinkedListNode.cs" />
+    <Compile Include="Ch05\MethodOverloads.cs" />
+    <Compile Include="Ch05\Nullable.cs" />
+    <Compile Include="Ch05\RectangleCollection.cs" />
+    <Compile Include="Ch05\Shape.cs" />
+    <Compile Include="Ch05\ShapeDisplay.cs" />
+    <Compile Include="Ch06\Example.cs" />
+    <Compile Include="Ch06\HelloCollection.cs" />
+    <Compile Include="Ch06\MusicTitles.cs" />
+    <Compile Include="Ch06\Person.cs" />
+    <Compile Include="Ch06\PersonCompareType.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

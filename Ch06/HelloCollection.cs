@@ -5,18 +5,56 @@ namespace ProCSharp.Ch06
 {
     public class HelloCollection
     {
-        public IEnumerator<string> GetEnumerator()
+        public IEnumerator GetEnumerator()
         {
-            yield return "Hello";
-            yield return "World";
+            return Enumerator(0);
         }
 
-        public void HelloWorld()
+        public class Enumerator : IEnumerator<string>, IEnumerator, IDisposable
         {
-            var helloCollection = new HelloCollection();
-            foreach (var s in helloCollection)
+            private int state;
+            private string current;
+
+            public Enumerator(int state)
             {
-                Console.WriteLine(s);
+                this.state = state;
+            }
+
+            bool System.Collections.IEnumerator.MoveNext()
+            {
+                switch (state)
+                {
+                    case 0:
+                        current = "Hello";
+                        state = 1;
+                        return true;
+                    case 1:
+                        current = "World";
+                        state = 2;
+                        return true;
+                    case 2:
+                        break;
+                }
+                return false;
+            }
+
+            void System.Collections.IEnumerator.Reset()
+            {
+                throw new NotSupportedException();
+            }
+
+            string System.Collections.Generic.IEnumerator<string>.Current
+            {
+                get { return current; }
+            }
+
+            object System.Collections.IEnumerator.Current
+            {
+                get { return current; }
+            }
+
+            void IDisposable.Dispose()
+            {
             }
         }
     }
