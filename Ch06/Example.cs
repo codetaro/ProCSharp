@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace ProCSharp.Ch06
 {
@@ -68,6 +69,50 @@ namespace ProCSharp.Ch06
             var sum = SumOfSegments(segments);
             Console.WriteLine("SumOfSegments: {0}", sum);*/
             
+            /*var titles = new MusicTitles();
+            foreach (var title in titles)
+            {
+                Console.WriteLine(title);
+            }
+            Console.WriteLine();
+            
+            Console.WriteLine("reverse");
+            foreach (var title in titles.Reverse())
+            {
+                Console.WriteLine(title);
+            }
+            Console.WriteLine();
+            
+            Console.WriteLine("subset");
+            foreach (var title in titles.Subset(2, 2))
+            {
+                Console.WriteLine(title);
+            }*/
+            
+            /*var game = new GameMoves();
+            IEnumerator enumerator = game.Cross();  // 将枚举器设置为由game.Cross()返回的枚举器类型
+            while (enumerator.MoveNext())  // enumerator.MoveNext()会调用Cross()方法，Cross()方法返回另一个枚举器
+            {
+                enumerator = enumerator.Current as IEnumerator;  // 返回的值可以用Current属性访问
+            }*/
+
+            /*var result = Divide(5, 2);
+            Console.WriteLine("result of division: {0}, reminder: {1}",
+                result.Item1, result.Item2);*/
+            
+            var janet = new Person { FirstName = "Janet", LastName = "Jackson" };
+            Person[] person1 =
+            {
+                new Person { FirstName = "Michael", LastName = "Jackson" },
+                janet
+            };
+            Person[] person2 =
+            {
+                new Person { FirstName = "Michael", LastName = "Jackson" },
+                janet
+            };
+            if (person1 != person2)
+                Console.WriteLine("not the same reference");
         }
 
         static int SumOfSegments(ArraySegment<int>[] segments)
@@ -81,6 +126,14 @@ namespace ProCSharp.Ch06
                 }
             }
             return sum;
+        }
+
+        public static Tuple<int, int> Divide(int dividend, int divisor)
+        {
+            int result = dividend / divisor;
+            int reminder = dividend % divisor;
+
+            return Tuple.Create<int, int>(result, reminder);
         }
     }
 }

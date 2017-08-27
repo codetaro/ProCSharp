@@ -67,6 +67,7 @@
     <Compile Include="Ch05\Shape.cs" />
     <Compile Include="Ch05\ShapeDisplay.cs" />
     <Compile Include="Ch06\Example.cs" />
+    <Compile Include="Ch06\GameMoves.cs" />
     <Compile Include="Ch06\HelloCollection.cs" />
     <Compile Include="Ch06\MusicTitles.cs" />
     <Compile Include="Ch06\Person.cs" />

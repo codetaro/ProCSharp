@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data;
+using System.Security.AccessControl;
 
 namespace ProCSharp.Ch06
 {
@@ -7,8 +10,19 @@ namespace ProCSharp.Ch06
     {
         public IEnumerator GetEnumerator()
         {
-            return Enumerator(0);
+//            yield return "Hello";
+//            yield return "World!";
+            return new Enumerator(0);
         }
+
+        /*public void HelloWorld()
+        {
+            var helloCollection = new HelloCollection();
+            foreach (var s in helloCollection)
+            {
+                Console.WriteLine(s);
+            }
+        }*/
 
         public class Enumerator : IEnumerator<string>, IEnumerator, IDisposable
         {
@@ -20,7 +34,12 @@ namespace ProCSharp.Ch06
                 this.state = state;
             }
 
-            bool System.Collections.IEnumerator.MoveNext()
+            public void Dispose()
+            {
+//                throw new NotImplementedException();
+            }
+
+            public bool MoveNext()
             {
                 switch (state)
                 {
@@ -38,23 +57,19 @@ namespace ProCSharp.Ch06
                 return false;
             }
 
-            void System.Collections.IEnumerator.Reset()
+            public void Reset()
             {
                 throw new NotSupportedException();
             }
 
-            string System.Collections.Generic.IEnumerator<string>.Current
+            public string Current
             {
                 get { return current; }
             }
 
-            object System.Collections.IEnumerator.Current
+            object IEnumerator.Current
             {
-                get { return current; }
-            }
-
-            void IDisposable.Dispose()
-            {
+                get { return Current; }
             }
         }
     }

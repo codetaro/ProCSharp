@@ -5,11 +5,8 @@ namespace ProCSharp.Ch06
 {
     public class MusicTitles
     {
-        private string[] names =
-        {
-            "Tubular Bells", "Hergest Ridge", "Ommadawn",
-            "Platinum"
-        };
+        string[] names = { "Tubular Bells", "Hergest Ridge", "Ommadawn",
+                           "Platinum" };
 
         public IEnumerator<string> GetEnumerator()
         {
@@ -31,7 +28,7 @@ namespace ProCSharp.Ch06
         {
             for (int i = index; i < index + length; i++)
             {
-                yield return names(i);
+                yield return names[i];
             }
         }
     }
