@@ -43,5 +43,11 @@ namespace ProCSharp.Ch07
         {
             return value.Dollars;
         }
+        
+        // Ch08
+        public static string GetCurrencyUnit()
+        {
+            return "Dollar";
+        }
     }
 }

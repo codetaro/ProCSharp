@@ -75,6 +75,7 @@
     <Compile Include="Ch07\Currency.cs" />
     <Compile Include="Ch07\Example.cs" />
     <Compile Include="Ch07\Vector.cs" />
+    <Compile Include="Ch08\Example.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
