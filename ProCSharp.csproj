@@ -72,6 +72,9 @@
     <Compile Include="Ch06\MusicTitles.cs" />
     <Compile Include="Ch06\Person.cs" />
     <Compile Include="Ch06\PersonCompareType.cs" />
+    <Compile Include="Ch07\Currency.cs" />
+    <Compile Include="Ch07\Example.cs" />
+    <Compile Include="Ch07\Vector.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
