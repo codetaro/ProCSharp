@@ -75,7 +75,10 @@
     <Compile Include="Ch07\Currency.cs" />
     <Compile Include="Ch07\Example.cs" />
     <Compile Include="Ch07\Vector.cs" />
+    <Compile Include="Ch08\BubbleSorter.cs" />
+    <Compile Include="Ch08\Employee.cs" />
     <Compile Include="Ch08\Example.cs" />
+    <Compile Include="Ch08\MathOperations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
