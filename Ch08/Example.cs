@@ -33,7 +33,7 @@ namespace ProCSharp.Ch08
             Console.WriteLine("String is {0}", firstStringMethod());*/
             
             // 简单的委托示例
-            Func<double, double>[] operations =
+            /*Func<double, double>[] operations =
             {
                 MathOperations.MultiplyByTwo,
                 MathOperations.Square
@@ -46,6 +46,23 @@ namespace ProCSharp.Ch08
                 ProcessAndDisplayNumber(operations[i], 7.94);
                 ProcessAndDisplayNumber(operations[i], 1.414);
                 Console.WriteLine();
+            }*/
+            
+            // BubbleSort
+            Employee[] employees =
+            {
+                new Employee("Bugs Bunny", 20000),
+                new Employee("Elmer Fudd", 10000),
+                new Employee("Daffy Duck", 25000),
+                new Employee("Wile Coyote", 1000000.38m),
+                new Employee("Foghorn Leghorn", 23000),
+                new Employee("RoadRunner", 50000)
+            };
+            BubbleSorter.Sort(employees, Employee.CompareSalary);
+
+            foreach (var employee in employees)
+            {
+                Console.WriteLine(employee);
             }
         }
 
